@@ -1,9 +1,9 @@
 /* Dados editáveis do site. Textos, links, fotos, planos e horários ficam aqui. */
 window.biohitData = {
   heroSlides: [
-    { title: 'TREINOS DE MUSCULAÇÃO', subtitle: 'A experiência além do exercício.', description: 'O novo padrão premium.', image: '../img/capa%20inicial1.png' },
-    { title: 'AULA DE STEP', subtitle: 'A liberdade de treinar em qualquer lugar.', description: 'Treine em todas as unidades.', image: '../img/capa%20inicial2.png' },
-    { title: 'CIRCUITO FUNCINAL', subtitle: 'Performance e estilo em cada detalhe.', description: 'Linha exclusiva Biohit.', image: '../img/capa%20inicial3.png' }
+    { title: 'TREINOS DE MUSCULAÇÃO', subtitle: 'A experiência além do exercício.', description: 'O novo padrão premium.', image: 'img/capa%20inicial1.png' },
+    { title: 'AULA DE STEP', subtitle: 'A liberdade de treinar em qualquer lugar.', description: 'Treine em todas as unidades.', image: 'img/capa%20inicial2.png' },
+    { title: 'CIRCUITO FUNCINAL', subtitle: 'Performance e estilo em cada detalhe.', description: 'Linha exclusiva Biohit.', image: 'img/capa%20inicial3.png' }
   ],
   arenas: [
     { title: 'Musculação', description: 'Equipamentos modernos e um ambiente preparado para a sua evolução.', image: 'https://biohitclub.com.br/wp-content/uploads/2019/12/WhatsApp-Image-2019-12-07-at-12.04.33-AM-1-1.jpeg', details: 'Uma arena completa para todos os níveis de treino, com atendimento próximo e estrutura premium.' },
