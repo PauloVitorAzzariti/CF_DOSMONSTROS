@@ -1,0 +1,133 @@
+/* AJUSTES RÁPIDOS — este arquivo é carregado depois de style.css. */
+:root {
+  /* Altere estas cores sem mexer na estrutura do site. */
+  --red: #ff7a00;
+  --black: #0a0a0a;
+  --white: #f8f8f8;
+}
+
+/* Exemplos:
+   .hero-slide { filter: saturate(.8); }
+   .hero-slide { transition-duration: 10s; }
+*/
+
+/* Menu lateral — inspirado na navegação de referência. */
+.menu-button { align-items:center; border:1px solid rgba(255,255,255,.2); border-radius:50%; height:50px; justify-content:center; padding:0; transition:background .25s ease,border-color .25s ease,transform .25s ease; width:50px; }
+.menu-button:hover { background:var(--red); border-color:var(--red); transform:scale(1.05); }
+.hamburger-icon { background:transparent !important; display:flex !important; flex-direction:column; gap:5px; height:auto !important; width:18px !important; }
+.hamburger-icon i { background:currentColor; display:block; height:1px; transition:transform .25s ease; width:100%; }
+
+.menu { background:rgba(0,0,0,.7); backdrop-filter:blur(16px); overflow:hidden; }
+.menu-panel { background:#090909; border-left:1px solid rgba(255,255,255,.07); box-shadow:-30px 0 70px rgba(0,0,0,.32); height:100%; margin-left:auto; overflow-y:auto; padding:clamp(34px,5vw,72px) clamp(30px,4vw,72px); position:relative; width:min(32vw,610px); }
+.menu-brand { align-items:center; border-bottom:1px solid rgba(255,255,255,.07); display:flex; height:80px; }
+.menu-brand img { display:block; max-height:42px; object-fit:contain; width:auto; }
+.menu-close { align-items:center; border:1px solid rgba(255,255,255,.18); border-radius:50%; display:flex; font-size:31px; height:50px; justify-content:center; position:absolute; right:clamp(30px,4vw,72px); top:clamp(34px,5vw,72px); transition:background .25s ease,transform .25s ease; width:50px; }
+.menu-close:hover { background:var(--red); transform:rotate(90deg); }
+.menu-eyebrow { color:var(--red); font-size:10px; font-weight:700; letter-spacing:.45em; margin:clamp(38px,6vh,68px) 0 26px; text-transform:uppercase; }
+.menu-links { left:auto; position:static; top:auto; transform:none; width:100%; }
+.menu-links a,.menu-links button { align-items:center; display:flex; font-size:clamp(1.7rem,2.15vw,2.65rem); letter-spacing:-.055em; min-height:58px; padding:7px 0; }
+.menu-links a:hover,.menu-links button:hover { padding-left:12px; }
+.menu:not([hidden]) .menu-links { animation:none; }
+.menu-contact { border-top:1px solid rgba(255,255,255,.07); margin-top:38px; padding-top:24px; }
+.menu-contact span { color:#999; display:block; font-size:9px; letter-spacing:.16em; text-transform:uppercase; }
+.menu-contact p { color:#ddd; font-size:12px; line-height:1.6; margin:12px 0 20px; }
+.menu-contact a { background:var(--red); border-radius:14px; display:flex; font-size:10px; font-weight:700; justify-content:center; letter-spacing:.17em; padding:18px 14px; text-transform:uppercase; transition:background .25s ease,color .25s ease; }
+.menu-contact a:hover { background:#fff; color:var(--red); }
+
+/* Mantém todas as fotos do carrossel principal em preto e branco. */
+.hero-slide { filter:grayscale(100%); }
+.hero-slide { transition:opacity 1.3s ease,transform 6s ease,filter .55s ease; }
+.hero.show-color .hero-slide.active { filter:grayscale(0); }
+@media (hover:hover) { .hero:hover .hero-slide.active { filter:grayscale(0); } }
+
+/* Tons que antes estavam definidos diretamente em vermelho. */
+.button-outline { border-color:rgba(255,122,0,.6); }
+.premium-copy { background:radial-gradient(circle at 100% 50%,rgba(255,122,0,.1),transparent 55%),#101010; }
+.button-primary { box-shadow:0 10px 30px rgba(255,122,0,.25); }
+.button-primary:hover { box-shadow:0 15px 35px rgba(255,122,0,.35); }
+.arenas::before,.units::before,.support::before { background:radial-gradient(circle,rgba(255,122,0,.1),transparent 68%); }
+::-webkit-scrollbar-thumb { background:linear-gradient(var(--red),#a64f00); }
+
+/* Seção de dúvidas em destaque. */
+.faq { background:var(--red); }
+.faq .eyebrow,
+.faq .section-heading em,
+.faq-question span { color:#fff; }
+.faq-item { border-color:rgba(255,255,255,.4); }
+.faq-question:hover,
+.faq-item.open .faq-question { color:#fff; }
+
+/* Mantém o texto de apresentação proporcional à foto da fachada. */
+.premium-copy { height:420px; min-height:0; padding:clamp(30px,3vw,56px); }
+.premium-copy p { font-size:clamp(1.05rem,1.4vw,1.35rem); line-height:1.4; }
+
+@media (max-width:900px) {
+  .premium-copy { height:360px; }
+  .premium-copy p { font-size:1.2rem; }
+}
+
+@media (max-width:640px) {
+  .premium-copy { height:auto; min-height:280px; }
+}
+
+.arenas .section-heading { max-width:950px; }
+
+/* Localização da unidade. */
+.location-map { display:grid; grid-template-columns:1.45fr .75fr; margin-top:65px; min-height:460px; }
+.location-map iframe { border:0; height:100%; min-height:460px; width:100%; }
+.location-map-copy { align-items:flex-start; background:linear-gradient(145deg,#171717,#0b0b0b); border:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; padding:clamp(34px,5vw,72px); }
+.location-map-copy h3 { font-family:var(--display); font-size:clamp(2rem,3.2vw,3.6rem); font-weight:300; letter-spacing:-.06em; line-height:.95; margin:0 0 24px; text-transform:uppercase; }
+.location-map-copy > p:not(.eyebrow) { color:#bbb; font-size:14px; line-height:1.7; margin:0 0 30px; }
+.location-map-copy .button { text-align:center; }
+@media (max-width:800px) { .location-map { grid-template-columns:1fr; margin-top:42px; } .location-map iframe { height:340px; min-height:0; } .location-map-copy { min-height:300px; } }
+
+/* Carrossel horizontal das modalidades. Substitua o fundo de cada card quando tiver as novas imagens. */
+.modality-carousel { display:grid; gap:18px; grid-auto-columns:minmax(295px,31vw); grid-auto-flow:column; overflow-x:auto; overscroll-behavior-inline:contain; padding:0 max(24px,calc((100% - var(--container))/2)) 20px; scroll-padding-inline:max(24px,calc((100% - var(--container))/2)); scroll-snap-type:inline mandatory; scrollbar-color:var(--red) #111; }
+.modality-card { background:linear-gradient(145deg,rgba(255,122,0,.16),transparent 48%),#121212; border:1px solid var(--line); display:flex; flex-direction:column; min-height:440px; overflow:hidden; padding:34px; position:relative; scroll-snap-align:start; transition:border-color .3s ease,transform .3s ease; }
+.modality-card::after { background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 60%); content:""; inset:0; pointer-events:none; position:absolute; }
+.modality-card:hover { border-color:var(--red); transform:translateY(-8px); }
+.modality-card > * { position:relative; z-index:1; }
+.modality-number { color:rgba(255,255,255,.2); font-family:var(--display); font-size:3rem; font-weight:300; line-height:1; position:absolute; right:28px; top:26px; }
+.modality-card .eyebrow { margin-bottom:auto; }
+.modality-card h3 { font-family:var(--display); font-size:clamp(2.2rem,3.1vw,3.6rem); font-weight:300; letter-spacing:-.065em; line-height:.86; margin:65px 0 32px; text-transform:uppercase; }
+.modality-card-musculacao h3 { font-size:clamp(2rem,2.2vw,2.65rem); }
+.modality-card-musculacao { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20musculação.png') center/cover no-repeat; }
+.modality-card-circuito { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20circuito%20funcional.png') center/cover no-repeat; }
+.modality-card-step { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20step.png') center/cover no-repeat; }
+.modality-card-combat { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20monstros%20combat.png') center/cover no-repeat; }
+.modality-card-jump { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20jump.png') center/cover no-repeat; }
+.modality-card-gap { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20para%20gap.png') center/cover no-repeat; }
+.modality-card-danca { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20dan%C3%A7a.png') center/cover no-repeat; }
+.modality-card-kickboxing { background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.2)),url('../img/capa%20Kickboxing.png') center/cover no-repeat; }
+
+/* Planos da Academia Monstros. */
+.monstros-plan-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.monstros-plan { min-height:335px; }
+.monstros-plan.highlight { background:linear-gradient(145deg,rgba(255,122,0,.19),transparent 55%),#151515; }
+.club-entry { align-items:baseline; border-top:1px solid rgba(255,122,0,.6); display:flex; gap:10px; margin-top:19px; padding-top:16px; }
+.club-entry span,.club-installments { color:#ddd; font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.club-entry strong { color:var(--red); font-family:var(--display); font-size:2rem; letter-spacing:-.06em; }
+.club-installments { line-height:1.5; margin:11px 0 18px; }
+.club-installments b { color:#fff; }
+.club-benefits { line-height:1.55 !important; }
+.club-benefits b { color:var(--red); display:block; font-size:9px; letter-spacing:.15em; margin-bottom:6px; text-transform:uppercase; }
+@media (max-width:600px) { .monstros-plan-list { grid-template-columns:1fr; } }
+
+/* Formulário de agendamento da visita. */
+.modal-card h2 em { color:var(--red); font-style:normal; }
+.visit-form { display:grid; gap:18px; margin-top:32px; max-width:680px; }
+.visit-form label { color:#ddd; display:grid; font-size:11px; font-weight:700; gap:8px; letter-spacing:.1em; text-transform:uppercase; }
+.visit-form label small { color:#999; font-size:9px; font-weight:400; letter-spacing:.04em; text-transform:none; }
+.visit-form input,.visit-form textarea { background:#0a0a0a; border:1px solid rgba(255,255,255,.2); border-radius:8px; color:#fff; font:400 14px var(--body); letter-spacing:normal; outline:none; padding:13px 14px; text-transform:none; transition:border-color .2s ease; width:100%; }
+.visit-form textarea { resize:vertical; }
+.visit-form input:focus,.visit-form textarea:focus { border-color:var(--red); }
+.visit-form-row { display:grid; gap:14px; grid-template-columns:1fr 1fr; }
+.visit-form .button { justify-self:start; margin-top:6px; }
+@media (max-width:500px) { .visit-form-row { grid-template-columns:1fr; } .visit-form .button { width:100%; } }
+.schedule { border-top:1px solid rgba(255,255,255,.2); display:grid; gap:7px; padding-top:19px; }
+.schedule strong { color:var(--red); font-size:9px; letter-spacing:.13em; margin-top:7px; text-transform:uppercase; }
+.schedule span { color:#eee; font-size:13px; line-height:1.45; }
+@media (max-width:700px) { .modality-carousel { grid-auto-columns:82vw; padding-left:18px; padding-right:18px; scroll-padding-left:18px; } .modality-card { min-height:410px; padding:28px; } }
+
+@media (max-width:1100px) { .menu-panel { width:min(48vw,610px); } }
+@media (max-width:700px) { .menu-panel { padding:24px; width:100%; } .menu-brand { height:58px; } .menu-brand img { max-height:34px; } .menu-close { height:44px; right:24px; top:24px; width:44px; } .menu-eyebrow { margin:52px 0 24px; } .menu-links a,.menu-links button { font-size:clamp(1.8rem,9vw,2.6rem); min-height:55px; } .menu-contact { margin-top:28px; } }
